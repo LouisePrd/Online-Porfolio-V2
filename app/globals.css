@@ -1,26 +1,117 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+  font-family: "Hit-Me-Punk";
+  src: url("/fonts/hit-me-punk/Hit\ me\,\ punk!\ 04.ttf");
+}
+
+@font-face {
+  font-family: "hypothetical-moon-of-mercury";
+  src: url("/fonts/hypothetical-moon-of-mercury/HypotheticalmoonofMercury.ttf");
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colors */
+  --color-pink: #ff00b3;
+  --color-black: #000000;
+  /* Fonts */
+  --police-titre: 'Hit-Me-Punk', arial;
+  --police-titre2-btn: 'hypothetical-moon-of-mercury', arial;
+  --police-texte: 'Bebas Neue', arial;
+  /* Sizes */
+  --font-size-very-large: 6em;
+  --font-size-large: 4em;
+  --font-size-medium: 2.3em;
+  --font-size-small: 1.8em;
+  --font-size-xsmall: 1.3em;
+  --font-size-xxsmall: 1em;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.sub-title {
+  font-family: var(--police-titre);
+  color: var(--color-black);
+  font-size: var(--font-size-large);
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  background-color: var(--color-pink);
+  width: fit-content;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#btnProject {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: var(--font-size-small);
+  color: #ffffff;
+  text-decoration: none;
+  margin: 10px;
+  font-family: var(--police-titre2-btn);
+}
+
+#btnHome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: var(--font-size-small);
+  color: #ffffff;
+  text-decoration: none;
+  margin: 10px;
+  font-family: var(--police-titre2-btn);
+}
+
+/* Media queries */
+
+@media (max-width: 1200px) {
+
+  :root {
+    --font-size-very-large: 5em;
+    --font-size-large: 3.5em;
+    --font-size-medium: 2em;
+  }
+}
+
+@media (max-width: 800px) {
+
+  :root {
+    --font-size-very-large: 4em;
+    --font-size-large: 3em;
+    --font-size-medium: 1.8em;
+  }
+
+  #btnHome,
+    #btnProject {
+      font-size: var(--font-size-xsmall);
+    }
+
+    .sub-title {
+      margin-top: 1.5em;
+    }
+}
+
+@media (max-width: 400px) {
+
+  :root {
+    --font-size-very-large: 3em;
+    --font-size-large: 2.5em;
+    --font-size-medium: 1.5em;
+  }
+
 }
