@@ -64,7 +64,7 @@ export default function Projects() {
       </div>
 
       <div className={styles.categories}>
-        <Link className={styles.category} href="/projects/computer-science">Development</Link>
+        <Link className={styles.category} href="/projects/it">Development</Link>
         <Link className={styles.category} href="/projects/audiovisual">Audiovisual</Link>
         <Link className={styles.category} href="/projects/3D">3D & Design</Link>
         <Link className={styles.category} href="/projects/associations">Associations</Link>

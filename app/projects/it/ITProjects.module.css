@@ -1,0 +1,85 @@
+.main-content {
+  background-image: url("/imgs/backgrounds/pink.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: visible;
+  padding-bottom: 50px;
+  scroll-behavior: smooth;
+  background-color: rgba(73, 11, 70, 0.7);
+
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.project-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.auFilDuTemps {
+  background-color: rgba(41, 36, 36, 0.5);
+}
+
+.elixir {
+  background-color: rgba(181, 134, 5, 0.5);
+}
+
+.marieGobelins {
+  background-color: rgba(0, 255, 187, 0.5);
+}
+
+.pigeonGate {
+  background-color: rgb(253, 81, 210);
+}
+
+.rerAGate {
+  background-color: rgba(0, 216, 159, 0.5);
+}
+
+.averagePlayer {
+  background-color: rgba(3, 2, 2, 0.755);
+}
+
+.inusTale {
+  background-color: rgba(0, 120, 240, 0.5);
+}
+
+.associatif {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
